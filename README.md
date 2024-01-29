@@ -1,1 +1,1 @@
-# model-Deployment-practise
+# titanic-survival-predictions
