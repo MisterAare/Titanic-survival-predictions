@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Authentication Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Bill Authentication Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="Variance">Variance:</label>
+        <input type="text" id="Variance" name="Variance"><br><br>
+        
+        <label for="Skewness">Skewness:</label>
+        <input type="text" id="Skewness" name="Skewness"><br><br>
+        
+        <label for="Curtosis">Curtosis:</label>
+        <input type="text" id="Curtosis" name="Curtosis"><br><br>
+        
+        <label for="Entropy">Entropy:</label>
+        <input type="text" id="Entropy" name="Entropy"><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
